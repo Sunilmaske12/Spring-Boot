@@ -21,7 +21,8 @@ public class MyController {
 	Customer c2=new Customer(2,"raj", "ramtek");
 	Customer c3=new Customer(3,"sunil", "Maharashtra");
 	Customer c4=new Customer(4,"aman", "khu");
-	list1.add(c1);list1.add(c2);list1.add(c3);list1.add(c4);
+	Customer c5=new Customer(5,"manoj", "rajegaon");
+	list1.add(c1);list1.add(c2);list1.add(c3);list1.add(c4);list1.add(c5);
 	}
 	
 	
@@ -56,7 +57,7 @@ public class MyController {
 	
 	@GetMapping("/stu")
 	public String student(Model model) {
-		String name="sunil";
+		String name="Anil";
 		model.addAttribute("name", name);
 		return "ram";
 	}
