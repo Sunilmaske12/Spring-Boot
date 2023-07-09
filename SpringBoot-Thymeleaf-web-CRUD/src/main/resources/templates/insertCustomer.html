@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head></head>
+	<body>
+	<h1>Save Customer</h1>
+	<form th:action="@{insertData}" th:object="${customer}" method="post">
+  <div class="mb-3" style="padding:30px;">
+    <label for="exampleInputEmail1" class="form-label">ID</label>
+    <input type="text" th:field="*{id}" class="form-control"  aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3" style="padding:30px;">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input type="text" th:field="*{name}" class="form-control" >
+  </div><div class="mb-3" style="padding:30px;">
+    <label for="exampleInputPassword1" class="form-label">Village</label>
+    <input type="text" th:field="*{village}" class="form-control">
+  </div>
+ <button
+  style="margin-left:50px" type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr>
+<a th:href="@{customer}">Go to Customer List</a>
+	</body>
+
+</html>
